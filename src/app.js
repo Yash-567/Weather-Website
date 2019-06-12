@@ -5,6 +5,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
+const port = process.env.PORT || 3000
 app.use(express.static(path.join(__dirname,'../public')))//provides app the path for all the files to be uploaded to the site i.e. images, html, css and js if we need an output to be seen when running app in browser terminal
 const viewsPath = path.join(__dirname,'../templates/views')
 const partialsPath =  path.join(__dirname,'../templates/partials')
@@ -70,6 +71,6 @@ app.get('*',(req,res)=>{
         errorMessage:'Page not found'
     })
 })
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port '+ port)
 })
