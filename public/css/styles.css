@@ -36,6 +36,9 @@ header a {
     margin-right: 16px;
     text-decoration: none;
 }
+header a:hover{
+    text-decoration: underline;
+}
 
 .portrait {
     width: 250px;
@@ -50,4 +53,7 @@ button{
     background: #888888;
     padding: 8px;
     color: white;
+}
+button:hover{
+    text-decoration: underline;
 }
