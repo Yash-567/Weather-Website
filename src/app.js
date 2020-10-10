@@ -49,6 +49,7 @@ app.get('/weather', (req,res)=>{
                     Error
                 })
             }
+            console.log(latitude,longitude);
             res.send({
                 location,
                 forecast : forecastData,
